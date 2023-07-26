@@ -1,91 +1,89 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
-const signup = () => {
+const Signup = () => {
   return (
-    <section className="min-h-screen bg-violet-200 flex items-center justify-center py-8" >
+    <section className="min-h-screen bg-violet-200 flex items-center justify-center py-8">
       <div className="bg-purple-400/40 p-8 border-solid border-4 border-transparent rounded-lg w-96">
-        <h1 className="mb-6 text-4xl text-center text-purple-800" >SignIn</h1>
+        <h1 className="mb-6 text-4xl text-center text-purple-800 font-bold">SignUp</h1>
 
         <form>
           <div className="mb-4">
-            <label For="Name" className=" text-purple-800 flex items-center mb-2 ">
+            <label htmlFor="Name" className="text-purple-800 flex items-center mb-2 font-semibold">
+              
               Name
             </label>
             <input
               type="text"
-              className="bg-violet-200  border-2 border-transparent rounded-lg px-3 py-2 w-full placeholder-purple-400/60"
+              className="focus:outline-none bg-violet-200 border-2 border-transparent rounded-full px-3 py-2 w-full placeholder-purple-400/60"
               id="Name"
-              placeholder="Name"
+              placeholder="Enter your name"
             />
           </div>
 
           <div className="mb-4">
-            <label For="Email" className=" text-purple-800 flex items-center  mb-2">
+            <label htmlFor="Email" className="focus:outline-none text-purple-800 flex items-center mb-2 font-semibold">
+              
               Email address
             </label>
             <input
               type="text"
-              className="bg-violet-200 border-2 border-transparent rounded-lg px-3 py-2 w-full placeholder-purple-400/60"
+              className="focus:outline-none bg-violet-200 border-2 border-transparent rounded-full px-3 py-2 w-full placeholder-purple-400/60"
               id="Email"
-              placeholder="Email address"
+              placeholder="Enter your email address"
             />
           </div>
 
-          <div className="mb-4 ">
-            <label For="Password" className=" text-purple-800 flex items-center mb-2">
+          <div className="mb-4">
+            <label htmlFor="Password" className="text-purple-800 flex items-center mb-2 font-semibold">
+             
               Password
             </label>
             <input
               type="password"
-              className=" bg-violet-200 border-2 border-transparent rounded-lg px-3 py-2 w-full placeholder-purple-400/60"
+              className="focus:outline-none bg-violet-200 border-2 border-transparent rounded-full px-3 py-2 w-full placeholder-purple-400/60"
               id="Password"
-              placeholder="Password"
+              placeholder="Enter your password"
             />
           </div>
 
           <div className="flex items-center mb-4">
-            <input
-              className="bg-violet-100 mr-2"
-              type="checkbox"
-              value=""
-              id="rememberme"
-              
-            />
-            <label className=" text-purple-800" For="rememberme">
+            <input className="bg-violet-100 mr-2" type="checkbox" value="" id="rememberme" />
+            <label className="font-semibold text-purple-800 " htmlFor="rememberme">
               Remember me
             </label>
           </div>
 
-          <div className=" text-purple-800 flex flex-col items-center mb-4">
-            <Link to="/Login">Already have an account? Sign in Now</Link>
+          <div className="text-purple-800 flex flex-col items-center mb-4">
+            <Link to="/Login">
+              <p className="font-semibold mb-0">Already have an account? Sign in Now!</p>
+            </Link>
           </div>
 
           <button
             type="submit"
-            className="bg-purple-400 text-violet-100 hover:bg-purple-500  px-4 py-2 rounded-lg w-full transition-colors duration-300"
+            className="font-bold bg-purple-400 text-violet-100 hover:bg-purple-500 px-4 py-2 rounded-full w-full transition-colors duration-300"
           >
-            Sign Up
+            SignUp
           </button>
 
           <div className="my-4">
-            <p className="text-center text-purple-800">OR</p>
+            <p className="text-center text-purple-800 mb-6 font-semibold">or continue with</p>
           </div>
 
           <a
-            className="bg-blue-500 hover:bg-blue-600 text-violet-100 px-4 py-2 rounded-lg block mb-2 w-full text-center transition-colors duration-300"
+            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-12 py-3 mr-3 rounded-full text-center transition-colors duration-300"
             href="#!"
             role="button"
           >
-            Continue with Facebook
+            Google
           </a>
           <a
-            className="bg-blue-400 hover:bg-blue-500 text-violet-100 px-4 py-2 rounded-lg block w-full text-center transition-colors duration-300"
+            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-10 py-3 ml-1 rounded-full text-center transition-colors duration-300"
             href="#!"
             role="button"
           >
-            Continue with Twitter
+            Facebook
           </a>
         </form>
       </div>
@@ -93,10 +91,4 @@ const signup = () => {
   );
 };
 
-export default signup;
-
-
-
-
-
-
+export default Signup;
