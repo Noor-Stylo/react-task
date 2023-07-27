@@ -5,12 +5,16 @@ const Signup = () => {
   return (
     <section className="min-h-screen bg-violet-200 flex items-center justify-center py-8">
       <div className="bg-purple-400/40 p-8 border-solid border-4 border-transparent rounded-lg w-96">
-        <h1 className="mb-6 text-4xl text-center text-purple-800 font-bold">SignUp</h1>
+        <h1 className="mb-6 text-4xl text-center text-purple-800 font-bold">
+          SignUp
+        </h1>
 
         <form>
           <div className="mb-4">
-            <label htmlFor="Name" className="text-purple-800 flex items-center mb-2 font-semibold">
-              
+            <label
+              htmlFor="Name"
+              className="text-purple-800 flex items-center mb-2 font-semibold"
+            >
               Name
             </label>
             <input
@@ -22,8 +26,10 @@ const Signup = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="Email" className="focus:outline-none text-purple-800 flex items-center mb-2 font-semibold">
-              
+            <label
+              htmlFor="Email"
+              className="focus:outline-none text-purple-800 flex items-center mb-2 font-semibold"
+            >
               Email address
             </label>
             <input
@@ -35,8 +41,10 @@ const Signup = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="Password" className="text-purple-800 flex items-center mb-2 font-semibold">
-             
+            <label
+              htmlFor="Password"
+              className="text-purple-800 flex items-center mb-2 font-semibold"
+            >
               Password
             </label>
             <input
@@ -48,38 +56,51 @@ const Signup = () => {
           </div>
 
           <div className="flex items-center mb-4">
-            <input className="bg-violet-100 mr-2" type="checkbox" value="" id="rememberme" />
-            <label className="font-semibold text-purple-800 " htmlFor="rememberme">
+            <input
+              className="bg-violet-100 mr-2"
+              type="checkbox"
+              value=""
+              id="rememberme"
+            />
+            <label
+              className="font-semibold text-purple-800 "
+              htmlFor="rememberme"
+            >
               Remember me
             </label>
           </div>
 
           <div className="text-purple-800 flex flex-col items-center mb-4">
             <Link to="/Login">
-              <p className="font-semibold mb-0">Already have an account? Sign in Now!</p>
+              <p className="font-semibold mb-0">
+                Already have an account? Sign in Now!
+              </p>
             </Link>
           </div>
 
-          <button
-            type="submit"
-            className="font-bold bg-purple-400 text-violet-100 hover:bg-purple-500 px-4 py-2 rounded-full w-full transition-colors duration-300"
-          >
-            SignUp
-          </button>
-
+          <Link to="/Home">
+            <button
+              type="submit"
+              className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-4 py-2 rounded-full w-full transition-colors duration-300"
+            >
+              SignUp
+            </button>
+          </Link>
           <div className="my-4">
-            <p className="text-center text-purple-800 mb-6 font-semibold">or continue with</p>
+            <p className="text-center text-purple-800 mb-6 font-semibold">
+              or continue with
+            </p>
           </div>
 
           <a
-            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-12 py-3 mr-3 rounded-full text-center transition-colors duration-300"
+            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-12 py-3 mr-2 rounded-full text-center transition-colors duration-300"
             href="#!"
             role="button"
           >
             Google
           </a>
           <a
-            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-10 py-3 ml-1 rounded-full text-center transition-colors duration-300"
+            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-10 py-3  rounded-full text-center transition-colors duration-300"
             href="#!"
             role="button"
           >

@@ -50,27 +50,27 @@ const Login = () => {
           <div className="text-purple-800 flex flex-col items-center mb-4 font-semibold">
             <Link to="/Signup">Don't have an account? SignUp Now!</Link>
           </div>
-
+           <Link to="/Home">
           <button
             type="submit"
             className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-4 py-2 rounded-full w-full transition-colors duration-300"
           >
             LogIn
           </button>
-
+          </Link>
           <div className="my-4">
             <p className="text-center text-purple-800 mb-6 font-semibold">or continue with </p>
           </div>
 
           <a
-            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-12 py-3 mr-3  rounded-full text-center transition-colors duration-300"
+            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-12 py-3 mr-2  rounded-full text-center transition-colors duration-300"
             href="#!"
             role="button"
           >
             Google
           </a>
           <a
-            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-10 py-3 ml-1  rounded-full text-center transition-colors duration-300"
+            className="font-bold bg-purple-400 hover:bg-purple-500 text-white px-10 py-3  rounded-full text-center transition-colors duration-300"
             href="#!"
             role="button"
           >
