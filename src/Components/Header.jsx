@@ -13,6 +13,12 @@ const Header = () => {
         <button className=' hover:bg-purple-500 text-white   transition-colors duration-300 rounded-lg p-1 ml-3 '> 
             About
         </button>
+        <div>
+        <button className=' hover:bg-purple-500 text-white   transition-colors duration-300 rounded-lg p-1 ml-3 '> 
+            Logout
+        </button>
+        </div>
+        
       </div>
     </div>
   )
