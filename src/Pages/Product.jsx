@@ -1,25 +1,50 @@
 import React from 'react';
+import img1 from '../Assets/body 1 red.png';
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
+const Product = () => {
+  const product = {
+    name: 'Example Product',
+    image: img1,
+    price: 19.99,
+    description: 'This is an example product description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    rating: 4.5,
+  };
 
-const ProductPage = () => {
   return (
-    <div className="container mx-auto p-4">
-      <div className="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-md">
-        <img
-          className="w-full h-64 object-cover object-center"
-          src="https://via.placeholder.com/300"
-          alt="Product"
-        />
-        <div className="px-6 py-4">
-          <h2 className="text-gray-800 text-2xl font-bold mb-2">Product Name</h2>
-          <p className="text-gray-600 text-sm">Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div className="flex items-center mt-4">
-            <span className="font-bold text-xl">$19.99</span>
-            <button className="ml-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add to Cart</button>
+    <>
+    <Header/>
+    <div className="container h-auto py-8 bg-violet-200">
+      <div className="flex flex-wrap">
+        {/* Product Image */}
+        <div className="w-full md:w-1/2 h-f p-4">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="h-auto w-96 "
+          />
+        </div>
+
+        {/* Product Details */}
+        <div className="  md:w-1/2 p-4 text-left mt-32 ">
+          <h2 className="text-2xl font-bold mb-4">{product.name}</h2>
+          <p className="text-gray-700 mb-4">
+            {product.description}
+          </p>
+          <p className="text-xl font-bold mb-2">${product.price.toFixed(2)}</p>
+          <div className="flex items-center mb-4">
+            <span className="text-yellow-500 mr-1">&#9733;</span>
+            <span>{product.rating}</span>
           </div>
+          <button className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded w-full">
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
-export default ProductPage;
+export default Product;

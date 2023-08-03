@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import  p1  from '../Assets/p1.png';
 import  p2  from '../Assets/p2.png';
 import  p3  from '../Assets/p3.png';
@@ -69,6 +70,7 @@ const Data = [
 
 const ProCards = () => {
   return (
+    <Link to='/Product'>
     <div className="container ml-28 mb-10">
       <div className="flex flex-wrap">
         {Data.map((product) => (
@@ -86,6 +88,7 @@ const ProCards = () => {
         ))}
       </div>
     </div>
+    </Link>
   );
 };
 

@@ -22,6 +22,7 @@ const Signup = () => {
               className="focus:outline-none bg-violet-200 border-2 border-transparent rounded-full px-3 py-2 w-full placeholder-purple-400/60"
               id="Name"
               placeholder="Enter your name"
+              required
             />
           </div>
 
@@ -33,10 +34,11 @@ const Signup = () => {
               Email address
             </label>
             <input
-              type="text"
+              type="email"
               className="focus:outline-none bg-violet-200 border-2 border-transparent rounded-full px-3 py-2 w-full placeholder-purple-400/60"
               id="Email"
               placeholder="Enter your email address"
+              required
             />
           </div>
 
@@ -52,7 +54,12 @@ const Signup = () => {
               className="focus:outline-none bg-violet-200 border-2 border-transparent rounded-full px-3 py-2 w-full placeholder-purple-400/60"
               id="Password"
               placeholder="Enter your password"
+              pattern=".{8,}" // At least 8 characters long
+              required
             />
+            <p className="text-sm text-purple-800 mt-1">
+              Password must be at least 8 characters long.
+            </p>
           </div>
 
           <div className="flex items-center mb-4">

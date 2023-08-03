@@ -1,15 +1,38 @@
 
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Perform form validation here
+    if (email === "" || password === "") {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+
+    console.log("Login successful!");
+  };
 
   return (
     <section className="min-h-screen bg-violet-200 flex items-center justify-center py-8">
       <div className="bg-purple-400 bg-opacity-40 p-8 border-solid border-4 border-transparent rounded-lg w-96">
         <h1 className="mb-6 text-4xl text-center text-purple-800 font-extrabold">LogIn</h1>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label For="Email" className="font-semibold text-purple-800 flex items-center mb-2">
               Email address
