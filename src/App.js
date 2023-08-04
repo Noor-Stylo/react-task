@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
 import Home from "./Pages/Home";
-import Product from "./Pages/Product";
+import ProDetail from "./Pages/ProDetail";
+import Cart from "./Pages/Cart";
+//import ProCards from "./Components/ProCards";
 function App() {
 return (
   <div className="App">
@@ -15,8 +17,11 @@ return (
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Home" element={<Home />} />
-          <Route path="/Product" element={<Product/>}/>
+          <Route path="/Product" element={<ProDetail/>}/>
           <Route path="/Logout" element={<Login/>}/>
+          <Route path="/Cart" element={<Cart/>}/>
+          <Route path="/ProCards" element={<Home/>} />
+          <Route path="/product/:id" component={<ProDetail/>} />
         </Routes>
       </div>
     </Router>

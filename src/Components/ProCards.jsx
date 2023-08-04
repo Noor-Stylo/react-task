@@ -70,26 +70,37 @@ const Data = [
 
 const ProCards = () => {
   return (
-    <Link to='/Product'>
-    <div className="container ml-28 mb-10">
-      <div className="flex flex-wrap">
+    <div className="container mx-auto px-4 lg:px-10">
+     <div className="flex flex-wrap justify-center lg:justify-start">
         {Data.map((product) => (
-          <div key={product.id} className="max-w-xs rounded overflow-hidden shadow-lg m-4">
-            <img className="w-80 h-80 bg-white rounded" src={product.image} alt={product.name} />
+          <div key={product.id} className="max-w-sm w-full md:w-64 rounded overflow-hidden shadow-lg m-4">
+            <Link to='/Product'> <img className="w-full h-64 bg-white rounded" src={product.image} alt={product.name} />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">{product.name}</div>
               <p className="text-gray-700 text-base">{product.description}</p>
             </div>
-            <div className="flex items-center mb-7 ml-10">
-            <span className="font-bold text-xl">${product.price}</span>
-            <button className="ml-16 bg-violet-400 hover:bg-purple-500 text-white  transition-colors duration-300 rounded-full font-bold py-2 px-4 ">Add to Cart</button>
+             </Link>
+            <div className="flex items-center justify-center lg:justify-start mt-4 px-4 mb-4">
+              <span className="font-bold text-xl">${product.price}</span>
+              <button className=" md:ml-12 bg-violet-400 hover:bg-purple-500 text-white transition-colors duration-300 rounded font-bold py-1 px-2">
+                Add to Cart
+              </button>
+            </div>
           </div>
-          </div>
+          
         ))}
       </div>
+     
     </div>
-    </Link>
   );
 };
 
 export default ProCards;
+
+
+
+
+
+
+
+

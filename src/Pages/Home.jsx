@@ -2,7 +2,7 @@ import React from 'react'
 import ProCards from '../Components/ProCards';
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
-import Product from '../Pages/Product';
+
 
 const Home = () => {
   return (

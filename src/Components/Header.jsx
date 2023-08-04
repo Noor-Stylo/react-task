@@ -13,18 +13,22 @@ const Header = () => {
               Home
             </button>
           </Link>
+          <Link to='/ProCards'>
           <button className='hover:bg-purple-500 text-white transition-colors duration-300 rounded-lg px-2 py-1 ml-3'>
             Products
           </button>
+          </Link>
+          <Link to='About'>
           <button className='hover:bg-purple-500 text-white transition-colors duration-300 rounded-lg px-2 py-1 ml-3'>
             About
           </button>
+          </Link>
         </div>
         <div className='flex items-center'>
           <div className='relative mr-3'>
             <input
               type='text'
-              className='focus:outline-none border-2 border-transparent rounded pl-4 pr-4 py-1 placeholder-gray-200'
+              className='focus:outline-none border-2 border-transparent rounded pl-4 pr-4 py-1 text-gray-500 placeholder-gray-200'
               id='Email'
               placeholder='Search Products'
             />
@@ -38,9 +42,11 @@ const Header = () => {
               Logout
             </button>
           </Link>
-          <button className='hover:bg-purple-500 text-white transition-colors duration-300 rounded-lg px-2 py-1 mr-10'>
-            <FontAwesomeIcon icon={faShoppingCart} />
+          <Link to='/Cart'><button className='flex hover:bg-purple-500 text-white transition-colors duration-300 rounded-lg px-2 py-1 mr-10'>
+            <FontAwesomeIcon icon={faShoppingCart}  />
+            <h6 className=' absolute text-[16px] text-gray-400 '>0</h6>
           </button>
+          </Link>
         </div>
       </div>
     </div>
